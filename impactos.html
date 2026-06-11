@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produção Agrícola</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .footer {
+            background-color: #030e50;; /* Cor roxa */
+            color: white; /* Texto branco */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px 0; /* Adiciona padding */
+            position: relative; /* Para garantir que o footer fique no final do conteúdo */
+            bottom: 0; /* Posiciona o footer no fundo */
+            width: 100%; /* Largura total */
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Garante que o footer fique na parte inferior */
+        }
+        main {
+            flex: 1; /* Faz com que o main ocupe o espaço restante */
+        }
+
+          body {
+    background-color: black !important;
+    color: white !important;
+}
+
+.cabecalho{
+background-color: rgb(18, 19, 19);
+}
+
+.cabecalho h3 {
+            color: #ffffff; /* Verde água */
+ }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Inclusão do Chart.js -->
+</head>
+
+<body>
+    <section class="cabecalho">
+        <h1>Agrinho 2025</h1>
+        <h3>Festejando Conexão Campo e Cidade</h3>
+    </section>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #030e50;;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="index.html">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="text-white mx-2">|</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="vida-no-campo.html">Vida no Campo</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="text-white mx-2">|</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="impactos.html">Impactos da Agricultura</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="text-white mx-2">|</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="cultivo.html">Cultivo Sustentável</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <audio id="musica" autoplay loop playsinline>
+  <source src="Music (online-audio-converter.com).mp3" type="audio/mpeg" />
+  Seu navegador não suporta áudio.
+</audio>
+
+<script>
+  const musica = document.getElementById('musica');
+  
+  // Força a tocar o áudio (mesmo que bloqueie, tenta)
+  musica.volume = 5;
+  musica.play().catch(e => {
+    console.log('Autoplay bloqueado, sem som até interação.');
+  });
+</script>
+
+
+
+  <audio id="somClick" src="Ian (online-audio-converter.com).mp3" preload="auto"></audio>
+
+  <script>
+    const som = document.getElementById("somClick");
+
+    document.addEventListener("click", () => {
+      som.pause();
+      som.currentTime = 0;
+      som.playbackRate = 2; // <-- aqui aumenta a velocidade
+      som.play().catch((e) => {
+        console.log("Erro ao tocar o som:", e);
+      });
+    });
+  </script>
+
+  <button id="muteBtn" aria-label="Mutar som" 
+  style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #030e50;
+    transition: background-color 0.3s ease;
+  ">
+  🔊
+</button>
+
+<script>
+  const btn = document.getElementById('muteBtn');
+
+  btn.addEventListener('click', () => {
+    const medias = document.querySelectorAll('audio, video');
+    const isMuted = medias.length > 0 ? medias[0].muted : false;
+
+    medias.forEach(media => {
+      media.muted = !isMuted;
+    });
+
+    btn.textContent = !isMuted ? '🔇' : '🔊';
+    btn.style.backgroundColor = !isMuted ? 'red' : '#030e50';
+  });
+</script>
+
+    <!-- Conteúdo Principal -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+<img src="assets/image/impactos.png.jpeg" class="img-fluid rounded" alt="Impactos da Agricultura" />
+            </div>
+            <div class="col-md-6">
+                 <h2>Impactos na Agricultura</h2>
+  <p>A agricultura, embora fundamental para a segurança alimentar e o desenvolvimento econômico, enfrenta diversos desafios que impactam diretamente sua produtividade e sustentabilidade. Entre os principais fatores estão a degradação do solo causada pelo uso excessivo de agroquímicos, a erosão e o desmatamento. Esses processos comprometem a fertilidade da terra, diminuindo sua capacidade de sustentar culturas a longo prazo.</p>
+
+  <p>Outro grande desafio é a escassez e a má gestão dos recursos hídricos, que afetam tanto a irrigação quanto a sobrevivência das comunidades rurais. As mudanças climáticas intensificam eventos extremos, como secas prolongadas e enchentes, dificultando o planejamento agrícola e aumentando a vulnerabilidade das lavouras. A pressão por produção em larga escala também pode levar à perda de biodiversidade e à degradação dos ecossistemas locais, afetando o equilíbrio ambiental.</p>
+
+  <p>Para mitigar esses impactos, a adoção de práticas sustentáveis é imprescindível. Isso inclui técnicas como o plantio direto, rotação de culturas, uso racional de insumos, agroecologia e tecnologias que promovem a conservação do solo e da água. Além disso, políticas públicas e incentivos financeiros são essenciais para apoiar agricultores na transição para modelos produtivos mais responsáveis, garantindo a segurança alimentar sem comprometer o meio ambiente e o bem-estar das futuras gerações.</p>
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Quadros de Informação -->
+        <h3 class="text-center my-4">Informações Relevantes</h3>
+        <div class="row my-4 justify-content-center">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Produção Sustentável</h5>
+                        <p class="card-text"><p>Agricultura sustentável promove práticas que respeitam o meio ambiente, a saúde pública e o equilíbrio.</p>
+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Economia Local</h5>
+                        <p class="card-text">A conexão entre agricultores e consumidores fortalece a economia local e reduz a dependência de grandes corporações.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Alimentos Frescos</h5>
+                        <p class="card-text"><p>O acesso a alimentos frescos e locais melhora a saúde, o bem-estar e a qualidade de vida da população urbana.</p>
+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Educação Alimentar</h5>
+                        <p class="card-text"><p>A conscientização sobre a origem dos alimentos é essencial para práticas responsáveis e sustentáveis.</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mini Gráfico -->
+        <h3 class="text-center my-4">Impacto da Agricultura na Economia (2018-2025)</h3>
+        <canvas id="lineChart" width="400" height="200"></canvas>
+        <script>
+            var ctx = document.getElementById('lineChart').getContext('2d');
+            var lineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                    datasets: [{
+                        label: 'Crescimento (%)',
+                        data: [5, 10, 15, 12, 20, 18, 25, 30], // Dados ajustados para um crescimento mais realista
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 2,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Crescimento (%)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Ano'
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+
+    <div class="container">
+  <h1>Ações para Fortalecer o Campo</h1>
+<p>
+Fortalecer o campo é essencial para garantir uma produção agrícola sólida, sustentável e que promova o desenvolvimento social e econômico das comunidades rurais. Para isso, é fundamental investir em capacitação técnica dos agricultores, oferecendo treinamentos que ampliem o conhecimento sobre práticas agrícolas modernas e sustentáveis.
+</p>
+<p>
+Além disso, o acesso facilitado a crédito rural e políticas públicas de apoio podem impulsionar a compra de insumos, equipamentos e tecnologias, aumentando a produtividade e a qualidade dos produtos. O incentivo à agricultura familiar também é crucial, pois ela representa a base da segurança alimentar e da preservação das tradições locais.
+</p>
+<p>
+Outro ponto importante é a melhoria da infraestrutura rural, como estradas, armazenamento e transporte, que facilita a comercialização dos produtos, reduz perdas e integra o campo às cidades. Por fim, o estímulo à adoção de energias renováveis e o manejo consciente dos recursos naturais contribuem para um campo mais resiliente e sustentável, garantindo o futuro das próximas gerações.
+</p>
+</div>
+
+
+<section id="fatos-especiais" style="max-width: 900px; width: 90vw; margin: 20px auto; padding: 20px; box-sizing: border-box;">
+  <h2 style="text-align: center; margin-bottom: 20px;">Fatos Especiais</h2>
+  <ul style="padding-left: 20px; margin: 0; list-style-type: disc;">
+    <li style="margin-bottom: 15px; font-size: 1.1rem;">
+      Cerca de 70% dos alimentos consumidos no Brasil são produzidos por pequenos agricultores familiares.
+    </li>
+    <li style="margin-bottom: 15px; font-size: 1.1rem;">
+      A logística rural inclui desde tratores até caminhões refrigerados que mantêm a qualidade dos produtos.
+    </li>
+    <li style="margin-bottom: 15px; font-size: 1.1rem;">
+      A produção agrícola brasileira é uma das mais diversas do mundo, destacando frutas, grãos e hortaliças.
+    </li>
+    <li style="margin-bottom: 15px; font-size: 1.1rem;">
+      Tecnologias como drones e sensores estão revolucionando o monitoramento e a eficiência das plantações.
+    </li>
+    <li style="margin-bottom: 15px; font-size: 1.1rem;">
+      A agricultura sustentável busca equilibrar produtividade com preservação ambiental para as futuras gerações.
+    </li>
+  </ul>
+</section>
+
+<section style="margin-top: 40px; padding: 20px; background-color: #000000; border-radius: 8px; max-width: 960px; margin-left: auto; margin-right: auto; color: #ddd;">
+  <h2 style="color: white; margin-bottom: 15px;">Referência</h2>
+  <p>
+    Impactos ambientais da agricultura e práticas sustentáveis – Ministério do Meio Ambiente (MMA)<br>
+    <a href="https://www.gov.br/mma/pt-br/assuntos/agricultura-sustentavel" 
+       target="_blank" rel="noopener noreferrer" style="color: #800080 !important; text-decoration: underline;">
+       https://www.gov.br/mma/pt-br/assuntos/agricultura-sustentavel
+    </a>
+  </p>
+</section>
+
+    <div class="footer">
+        <p>Todos os direitos reservados para Produção Agrícola 2025 - Festejando a conexão campo e cidade.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produção Agrícola</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .footer {
+            background-color: #030e50;; /* Cor roxa */
+            color: white; /* Texto branco */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px 0; /* Adiciona padding */
+            position: relative; /* Para garantir que o footer fique no final do conteúdo */
+            bottom: 0; /* Posiciona o footer no fundo */
+            width: 100%; /* Largura total */
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Garante que o footer fique na parte inferior */
+        }
+        main {
+            flex: 1; /* Faz com que o main ocupe o espaço restante */
+        }
+
+        body {
+    background-color: black !important;
+    color: white !important;
+}
+
+.cabecalho{
+background-color: rgb(18, 19, 19);
+}
+
+.cabecalho h3 {
+            color: #ffffff; /* Verde água */
+ }
+    </style>
+</head>
+
+<body>
+    <section class="cabecalho">
+        <h1>Agrinho 2025</h1>
+        <h3>Festejando Conexão Campo e Cidade</h3>
+    </section>
+
+<nav class="navbar navbar-expand-lg" style="background-color: #030e50;;">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" href="index.html">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <span class="text-white mx-2">|</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="vida-no-campo.html">Vida no Campo</a>
+                </li>
+                <li class="nav-item">
+                    <span class="text-white mx-2">|</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="impactos.html">Impactos da Agricultura</a>
+                </li>
+                <li class="nav-item">
+                    <span class="text-white mx-2">|</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="cultivo.html">Cultivo Sustentável</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<audio id="musica" autoplay loop playsinline>
+  <source src="Music (online-audio-converter.com).mp3" type="audio/mpeg" />
+  Seu navegador não suporta áudio.
+</audio>
+
+<script>
+  const musica = document.getElementById('musica');
+  
+  // Força a tocar o áudio (mesmo que bloqueie, tenta)
+  musica.volume = 5;
+  musica.play().catch(e => {
+    console.log('Autoplay bloqueado, sem som até interação.');
+  });
+</script>
+
+
+
+  <audio id="somClick" src="Ian (online-audio-converter.com).mp3" preload="auto"></audio>
+
+  <script>
+    const som = document.getElementById("somClick");
+
+    document.addEventListener("click", () => {
+      som.pause();
+      som.currentTime = 2;
+      som.playbackRate = 2; // <-- aqui aumenta a velocidade
+      som.play().catch((e) => {
+        console.log("Erro ao tocar o som:", e);
+      });
+    });
+  </script>
+
+  <button id="muteBtn" aria-label="Mutar som" 
+  style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #030e50;
+    transition: background-color 0.3s ease;
+  ">
+  🔊
+</button>
+
+<script>
+  const btn = document.getElementById('muteBtn');
+
+  btn.addEventListener('click', () => {
+    const medias = document.querySelectorAll('audio, video');
+    const isMuted = medias.length > 0 ? medias[0].muted : false;
+
+    medias.forEach(media => {
+      media.muted = !isMuted;
+    });
+
+    btn.textContent = !isMuted ? '🔇' : '🔊';
+    btn.style.backgroundColor = !isMuted ? 'red' : '#030e50';
+  });
+</script>
+
+    <main class="container my-5">
+        <!-- Imagem e Texto Explicativo -->
+       <div class="d-flex justify-content-center align-items-center mb-4" style="gap: 20px; flex-wrap: wrap;">
+  <div style="max-width: 220px; text-align: right;">
+    <h5>Produção Orgânica</h5>
+    <p>
+      O cultivo orgânico evita pesticidas e fertilizantes químicos, protegendo o solo e a biodiversidade. 
+      Técnicas como rotação de culturas e compostagem mantêm a fertilidade natural e garantem frutas mais saudáveis.
+    </p>
+  </div>
+  
+  <img src="assets/image/laranja.png.jpeg" alt="Cultivo Sustentável" style="max-width: 280px; height: auto; border-radius: 8px;">
+
+  <div style="max-width: 220px; text-align: left;">
+    <h5>Colheita Manual</h5>
+    <p>
+      A colheita manual seleciona frutos no ponto ideal, preservando a planta e garantindo qualidade. 
+      O manejo sustentável usa água com consciência e controla pragas naturalmente, valorizando o trabalho do agricultor.
+    </p>
+  </div>
+</div>
+
+
+        <h2 style="text-align: center;">Cultivo Sustentável</h2>
+
+        <p>A agricultura sustentável é um conceito que visa atender às necessidades alimentares da população atual sem comprometer a capacidade das futuras gerações de atenderem suas próprias necessidades. Essa abordagem envolve práticas que respeitam o meio ambiente, promovendo a biodiversidade e a saúde dos ecossistemas. Um dos principais objetivos da agricultura sustentável é reduzir o uso de produtos químicos nocivos, como pesticidas e fertilizantes sintéticos, que podem causar danos ao solo e à água.</p>
+        
+        <p>Além disso, a agricultura sustentável busca otimizar o uso dos recursos naturais, como água e solo, garantindo que esses recursos sejam utilizados de forma eficiente e responsável. Técnicas como a rotação de culturas, o plantio direto e a agricultura de conservação são exemplos de práticas que ajudam a manter a fertilidade do solo e a prevenir a erosão. Essas práticas não só melhoram a produtividade agrícola, mas também contribuem para a resiliência das comunidades rurais diante das mudanças climáticas.</p>
+        
+        <p>Outro aspecto importante do cultivo sustentável é a promoção da justiça social e econômica. Isso significa apoiar os agricultores locais e garantir que eles recebam um preço justo por seus produtos. A agricultura sustentável também envolve a educação dos consumidores sobre a origem dos alimentos e a importância de escolher produtos que são cultivados de maneira responsável. Esse conhecimento pode levar a uma maior demanda por produtos orgânicos e locais, beneficiando tanto os agricultores quanto os consumidores.</p>
+        
+        <p>Por fim, a agricultura sustentável é uma abordagem holística que considera não apenas a produção de alimentos, mas também o impacto social e ambiental da agricultura. Isso inclui a preservação da biodiversidade, a proteção dos habitats naturais e o fortalecimento das comunidades rurais. Com essas práticas, é possível construir um sistema alimentar mais justo, saudável e resiliente.</p>
+        
+        <p>Em resumo, o cultivo sustentável é essencial para garantir a segurança alimentar e a saúde do planeta. Ao adotar práticas agrícolas que respeitam o meio ambiente e promovem a justiça social, podemos contribuir para um futuro mais sustentável e equilibrado. A mudança começa com cada um de nós, seja como agricultores, consumidores ou defensores do meio ambiente.</p>
+
+        <!-- Cards -->
+        <h3 class="text-center my-4">Práticas de Cultivo Sustentável</h3>
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Rotação de Culturas</h5>
+                        <p class="card-text">A rotação de culturas é uma técnica que envolve alternar diferentes tipos de culturas em uma mesma área ao longo do tempo. Isso ajuda a melhorar a saúde do solo, reduzindo a incidência de pragas e doenças, além de aumentar a fertilidade do solo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Agricultura Orgânica</h5>
+                        <p class="card-text">A agricultura orgânica utiliza métodos naturais para cultivar alimentos, evitando o uso de produtos químicos sintéticos. Essa prática não só protege o meio ambiente, mas também resulta em alimentos mais saudáveis e nutritivos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container py-5">
+  <div class="card shadow-lg rounded-4 p-4 mx-auto" style="max-width: 700px;">
+    <h2 class="mb-2 text-success text-center">João Vitor Angieski de Bona</h2>
+    <h5 class="mb-4 text-secondary fst-italic text-center">Agricultor Familiar, 27 anos</h5>
+
+    <div class="text-center mb-4">
+      <img src="assets/image/bona.png.jpeg" alt="João Vitor Angieski de Bona" 
+           class="img-fluid rounded-circle shadow-sm" style="width: 250px; height: 250px; object-fit: cover;">
+      <figcaption class="mt-2 fst-italic text-muted">João Vitor na sua propriedade rural, cuidando da terra que ama.</figcaption>
+    </div>
+
+    <div class="card-text" style="text-align: justify; line-height: 1.6; font-size: 1.1rem;">
+      <p>
+        João Vitor Angieski de Bona nasceu e cresceu em uma pequena comunidade rural, onde desde cedo aprendeu o valor do trabalho na terra e a importância da agricultura familiar para o desenvolvimento local. Com 27 anos, ele é a terceira geração de sua família dedicada à agricultura, mantendo viva a tradição, mas também trazendo inovações para aumentar a produtividade e a sustentabilidade da fazenda.
+      </p>
+
+      <p>
+        Apaixonado pela vida no campo, João Vitor utiliza práticas agrícolas sustentáveis que respeitam o meio ambiente, como a rotação de culturas, o uso racional da água e técnicas de adubação natural. Ele acredita que a agricultura familiar tem um papel fundamental na segurança alimentar e no fortalecimento das comunidades rurais, gerando emprego e renda para milhares de pessoas.
+      </p>
+
+      <p>
+        Além de agricultor, João Vitor é um entusiasta da tecnologia aplicada ao campo. Ele tem investido na digitalização de processos, como monitoramento do solo e controle de irrigação, o que tem ajudado a otimizar o uso dos recursos naturais e aumentar a qualidade da produção. Sua fazenda é exemplo de como tradição e inovação podem caminhar juntas para construir um futuro mais próspero.
+      </p>
+
+      <p>
+        João Vitor também está engajado em atividades comunitárias, participando de cooperativas agrícolas e promovendo a troca de conhecimento entre os agricultores da região. Para ele, a união da comunidade é essencial para superar desafios como as mudanças climáticas e o acesso limitado a tecnologias e mercados.
+      </p>
+
+      <p>
+        Fora da fazenda, João Vitor gosta de compartilhar suas experiências com jovens rurais, incentivando-os a valorizar a agricultura familiar e a buscar novas soluções para os problemas do campo. Seu compromisso é claro: garantir que o campo continue a alimentar a cidade, preservando os recursos naturais e promovendo um desenvolvimento sustentável e justo para todos.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+       
+
+        <!-- Perguntas e Respostas -->
+        <h3 class="text-center my-4">Perguntas Frequentes</h3>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        O que é cultivo sustentável?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        O cultivo sustentável é uma abordagem agrícola que visa produzir alimentos de maneira que respeite o meio ambiente, conserve recursos naturais e promova a justiça social. Isso envolve práticas que minimizam o uso de produtos químicos, otimizam o uso da água e do solo, e garantem condições justas para os agricultores.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Quais são os benefícios do cultivo sustentável?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Os benefícios do cultivo sustentável incluem a preservação da biodiversidade, a melhoria da qualidade do solo, a redução da poluição e a promoção da saúde pública. Além disso, essa abordagem ajuda a aumentar a resiliência das comunidades agrícolas às mudanças climáticas e melhora a segurança alimentar.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Como posso apoiar a agricultura sustentável?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Você pode apoiar a agricultura sustentável comprando produtos orgânicos, participando de feiras de agricultores locais e educando-se sobre práticas agrícolas responsáveis. Além disso, apoiar políticas que promovam a sustentabilidade na agricultura também é fundamental.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<section style="margin-top: 40px; padding: 20px; background-color: #000000; border-radius: 8px; max-width: 960px; margin-left: auto; margin-right: auto; color: #ddd;">
+  <h2 style="color: white; margin-bottom: 15px;">Referência</h2>
+  <p>
+    Agricultura orgânica e cultivo sustentável – Instituto de Agricultura Orgânica (ISAO)<br>
+    <a href="https://www.isao.org.br/agricultura-organica/" 
+       target="_blank" rel="noopener noreferrer" style="color: #800080 !important; text-decoration: underline;">
+       https://www.isao.org.br/agricultura-organica/
+    </a>
+  </p>
+</section>
+
+    <div class="footer">
+        <p>Todos os direitos reservados para Cultivo Sustentável - Festejando a conexão campo e cidade.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

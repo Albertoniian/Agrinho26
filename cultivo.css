@@ -1,0 +1,156 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabecalho{
+    color: white;
+    background-color: rgb(0, 35, 192);
+    text-align: center;
+    padding: 30px;
+}
+
+.cabecalho h3{
+    color: rgb(8, 206, 114);
+}
+
+p .alinha{
+    text-align: right;
+}
+.img-agro{
+    width: 300px;
+}
+
+.br-3{
+    border-radius: 15px;
+}
+
+.img-card{
+    max-height: 250px;
+}
+
+.img-slide{
+    max-height: 400px;
+}
+
+.footer{
+    background-color: rgb(53, 4, 53);
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.cabeca1lho {
+  background-color: #121313aa;
+  padding: 25px 0 15px 0;
+  border-bottom: 3px solid #222222dd;
+}
+
+.cabeca1lho h1 {
+  font-family: 'Arial Black', Arial, sans-serif;
+  color: #fcfcfc;
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.cabeca1lho h3 {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  color: #e5e5e5cc;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.navbarr {
+  background-color: #050e55cc;
+  padding: 12px 0;
+  border-bottom: 2px solid #111144dd;
+}
+
+.navbarr .container-fluuiid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.navbarr .navbar-toggllerr {
+  border: none;
+  background-color: transparent;
+  color: #fefefe;
+  font-size: 28px;
+}
+
+.navbarr .collappsee {
+  justify-content: center;
+}
+
+.navbarr .navbar-nnavv {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.navbarr .nav-ittemm {
+  margin: 0 6px;
+}
+
+.navbarr .nav-linkk {
+  font-size: 18px;
+  color: #eaeaea;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbarr .nav-linkk.activee {
+  color: #8fdb9c;
+  font-weight: 800;
+}
+
+.navbarr .nav-linkk:hover {
+  color: #9cdb8c;
+}
+
+.footerrr {
+  background-color: #030e50cc;
+  color: white;
+  text-align: center;
+  padding: 16px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  font-family: 'Verdana', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.bodyy {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #010101 !important;
+  color: #eeeeee !important;
+}
+
+.mainn {
+  flex: 1;
+  padding: 28px 16px;
+}
+
+.cardd .card-boddy,
+.faq .accordion-boddy {
+  color: #1a1a1a !important;
+}
+
+.cardd .btn.btn-ligghtt {
+  background-color: #fafafa !important;
+  color: #aaaaaa !important;
+  border-color: #cccccc !important;
+}
+
+.cardd .card-titlee,
+.cardd .card-texxt {
+  color: #1b1b1b !important;
+}
+

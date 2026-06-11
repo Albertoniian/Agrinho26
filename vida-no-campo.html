@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produção Agrícola</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .footer {
+            background-color: #030e50;; /* Cor roxa */
+            color: white; /* Texto branco */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px 0; /* Adiciona padding */
+            position: relative; /* Para garantir que o footer fique no final do conteúdo */
+            bottom: 0; /* Posiciona o footer no fundo */
+            width: 100%; /* Largura total */
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Garante que o footer fique na parte inferior */
+        }
+        main {
+            flex: 1; /* Faz com que o main ocupe o espaço restante */
+        }
+
+         body {
+    background-color: black !important;
+    color: white !important;
+}
+
+.table {
+  background-color: black !important;
+  border: 1px solid white !important;
+}
+
+.table thead, 
+.table tbody, 
+.table tr {
+  background-color: black !important;
+}
+
+.table th, 
+.table td {
+  border: 1px solid white !important;
+  color: white !important;
+  background-color: black !important;
+}
+
+.cabecalho{
+background-color: rgb(18, 19, 19);
+}
+
+.cabecalho h3 {
+            color: #ffffff; /* Verde água */
+ }
+
+    </style>
+</head>
+
+<body>
+    <section class="cabecalho">
+        <h1>Agrinho 2025</h1>
+        <h3>Festejando Conexão Campo e Cidade</h3>
+    </section>
+
+<nav class="navbar navbar-expand-lg" style="background-color: #030e50;;">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" href="index.html">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <span class="text-white mx-2">|</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="vida-no-campo.html">Vida no Campo</a>
+                </li>
+                <li class="nav-item">
+                    <span class="text-white mx-2">|</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="impactos.html">Impactos da Agricultura</a>
+                </li>
+                <li class="nav-item">
+                    <span class="text-white mx-2">|</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="cultivo.html">Cultivo Sustentável</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<audio id="somClick" src="Ian (online-audio-converter.com).mp3" preload="auto"></audio>
+
+  <audio id="musica" autoplay loop playsinline>
+  <source src="Music (online-audio-converter.com).mp3" type="audio/mpeg" />
+  Seu navegador não suporta áudio.
+</audio>
+
+<script>
+  const musica = document.getElementById('musica');
+  
+  // Força a tocar o áudio (mesmo que bloqueie, tenta)
+  musica.volume = 5;
+  musica.play().catch(e => {
+    console.log('Autoplay bloqueado, sem som até interação.');
+  });
+</script>
+
+
+
+  <audio id="somClick" src="Ian (online-audio-converter.com).mp3" preload="auto"></audio>
+
+  <script>
+    const som = document.getElementById("somClick");
+
+    document.addEventListener("click", () => {
+      som.pause();
+      som.currentTime = 0;
+      som.playbackRate = 2; // <-- aqui aumenta a velocidade
+      som.play().catch((e) => {
+        console.log("Erro ao tocar o som:", e);
+      });
+    });
+  </script>
+
+  <button id="muteBtn" aria-label="Mutar som" 
+  style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #030e50;
+    transition: background-color 0.3s ease;
+  ">
+  🔊
+</button>
+
+<script>
+  const btn = document.getElementById('muteBtn');
+
+  btn.addEventListener('click', () => {
+    const medias = document.querySelectorAll('audio, video');
+    const isMuted = medias.length > 0 ? medias[0].muted : false;
+
+    medias.forEach(media => {
+      media.muted = !isMuted;
+    });
+
+    btn.textContent = !isMuted ? '🔇' : '🔊';
+    btn.style.backgroundColor = !isMuted ? 'red' : '#030e50';
+  });
+</script>
+
+<!-- Conteúdo Principal -->
+<div class="container my-5">
+   
+  <h1>A Vida no Campo</h1>
+
+<p>
+A vida no campo é marcada pela tranquilidade, pelo contato direto com a natureza e por um ritmo mais calmo em comparação com o ambiente urbano. Longe do barulho das cidades, o campo oferece uma qualidade de vida diferenciada, onde o canto dos pássaros substitui o som dos carros e o nascer do sol é apreciado como um espetáculo diário. As pessoas que vivem no campo costumam valorizar o trabalho coletivo, o respeito ao tempo da terra e a importância da convivência com vizinhos e familiares, reforçando laços comunitários que muitas vezes se perdem nos grandes centros.
+</p>
+
+<p>
+O cotidiano no campo é fortemente ligado à terra e às estações do ano. Agricultores e criadores de animais seguem um calendário natural, adaptando suas atividades conforme o clima e as necessidades da produção. Essa conexão com a natureza ensina lições importantes sobre paciência, resiliência e respeito ao meio ambiente. O trabalho é intenso, mas gratificante, pois há uma satisfação especial em ver os frutos do próprio esforço crescendo e alimentando outras pessoas. Além disso, a alimentação no campo costuma ser mais saudável, baseada em produtos frescos e muitas vezes cultivados de forma orgânica.
+</p>
+
+<p>
+Apesar das vantagens, a vida no campo também apresenta desafios, como o acesso limitado a serviços de saúde, educação e infraestrutura. No entanto, com o avanço da tecnologia e das políticas públicas, muitas comunidades rurais vêm se desenvolvendo, com internet, energia renovável e melhorias nas estradas e escolas. Cada vez mais, há um movimento de valorização do campo, tanto por parte de quem vive nele quanto daqueles que desejam fugir do estresse das cidades. A vida no campo, com seus encantos e simplicidade, continua sendo uma opção digna e promissora para quem busca equilíbrio, conexão com a natureza e uma rotina mais harmoniosa.
+</p>
+
+
+
+    <!-- Imagens -->
+    <div class="row my-4">
+        <div class="col-md-6">
+<img src="assets/image/colheitadera.png.jpeg" class="img-fluid rounded" alt="Drones na Agricultura" />
+        </div>
+        <div class="col-md-6">
+<img src="assets/image/trator.png.jpeg" class="img-fluid rounded" alt="Sensores de Solo" />
+        </div>
+    </div>
+
+    <!-- Tabela com Informações Reais -->
+<h3>Tabela de Aspectos da Vida no Campo</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Aspecto</th>
+            <th>Descrição</th>
+            <th>Impacto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Produção Agrícola</td>
+            <td>Atividades ligadas ao cultivo de alimentos como hortaliças, grãos e frutas.</td>
+            <td>Garante a segurança alimentar e movimenta a economia local.</td>
+        </tr>
+        <tr>
+            <td>Criação de Animais</td>
+            <td>Pecuária voltada para leite, carne e ovos, muitas vezes de forma artesanal.</td>
+            <td>Geração de renda e oferta de alimentos frescos e naturais.</td>
+        </tr>
+        <tr>
+            <td>Convívio Comunitário</td>
+            <td>Relações próximas entre vizinhos e familiares, baseadas em cooperação.</td>
+            <td>Fortalecimento dos laços sociais e apoio mútuo em atividades diárias.</td>
+        </tr>
+        <tr>
+            <td>Contato com a Natureza</td>
+            <td>Presença constante de paisagens naturais, ar puro e tranquilidade.</td>
+            <td>Melhora na saúde mental e qualidade de vida.</td>
+        </tr>
+        <tr>
+            <td>Tradições Culturais</td>
+            <td>Festas, culinária típica e práticas passadas entre gerações.</td>
+            <td>Preservação da identidade e do patrimônio cultural rural.</td>
+        </tr>
+    </tbody>
+</table>
+
+
+    <!-- Textos Explicativos -->
+    <h3>Explorando as Máquinas no Campo</h3>
+<p>
+A vida no campo vem se transformando com o avanço das tecnologias agrícolas, que têm contribuído significativamente para melhorar a produtividade e a sustentabilidade das atividades rurais. Os <strong>drones</strong>, por exemplo, estão se tornando ferramentas essenciais no monitoramento das plantações. Com imagens aéreas em tempo real, os agricultores conseguem identificar pragas, doenças e falhas no plantio com muito mais agilidade. Essa visão detalhada do campo também permite uma aplicação mais precisa de pesticidas, diminuindo o uso excessivo de produtos químicos e protegendo o meio ambiente — algo diretamente ligado à preservação do solo e da saúde das comunidades rurais.
+</p>
+
+<p>
+Outro grande aliado no campo são os <strong>sensores de solo</strong>, que medem em tempo real fatores como umidade, temperatura e níveis de nutrientes. Com essas informações, os agricultores conseguem fazer uma irrigação e adubação muito mais eficientes, otimizando recursos e melhorando a qualidade da produção. A <strong>inteligência artificial</strong> complementa esse processo ao analisar dados de colheitas anteriores, clima e solo para prever safras, sugerir o melhor momento para o plantio e até identificar problemas antes que eles ocorram. Isso contribui diretamente para uma rotina agrícola mais organizada, com menos desperdício e mais planejamento — algo essencial para quem vive e trabalha no campo.
+</p>
+
+<p>
+Além dessas tecnologias mais recentes, máquinas tradicionais como o <strong>trator</strong> e a <strong>colheitadeira</strong> continuam sendo pilares da agricultura moderna. O trator é fundamental para preparar a terra, arar o solo e transportar cargas, sendo um verdadeiro símbolo da força no campo. Já a colheitadeira automatiza o processo de colheita, reduzindo o esforço manual e permitindo que grandes áreas sejam colhidas em menos tempo e com maior precisão. A presença dessas máquinas no campo facilita o trabalho diário, aumenta a produtividade e melhora a qualidade de vida dos trabalhadores rurais. Dessa forma, a integração entre tradição e inovação tecnológica torna a vida no campo cada vez mais eficiente, segura e sustentável.
+</p>
+
+
+
+    <div></div>
+    
+    <div></div>
+    <!-- Carrossel de Imagens -->
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/image/rua.png.jpeg" class="d-block w-100" alt="Imagem 1">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/image/" class="d-block w-100" alt="Imagem 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://example.com/carousel3.jpg" class="d-block w-100" alt="Imagem 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+</div>
+
+<section style="margin-top: 40px; padding: 20px; background-color: #000000; border-radius: 8px; max-width: 960px; margin-left: auto; margin-right: auto; color: #ddd;">
+  <h2 style="color: white; margin-bottom: 15px;">Referência</h2>
+  <p>
+    Vida no campo: aspectos sociais e culturais – Instituto Brasileiro de Geografia e Estatística (IBGE)<br>
+    <a href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv100882_informativo.pdf" 
+       target="_blank" rel="noopener noreferrer" style="color: #800080 !important; text-decoration: underline;">
+       https://biblioteca.ibge.gov.br/visualizacao/livros/liv100882_informativo.pdf
+    </a>
+  </p>
+</section>
+
+
+ <div class="footer">
+        <p>Todos os direitos reservados para Produção Agrícola 2025 - Festejando a conexão campo e cidade.</p>
+    </div>
+
+</body>
+</html>
